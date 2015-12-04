@@ -71,5 +71,6 @@ def run():
     # Run all sorting algorithms
     sort_algos(sample, size, no_of_times=repeat, sample_range=max_range)
 
+
 if __name__ == "__main__":
     run()

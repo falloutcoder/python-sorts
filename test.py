@@ -4,7 +4,9 @@ import random
 import importlib
 import unittest
 
+
 class SortAlgosTest(unittest.TestCase):
+
     def setUp(self):
         """
         Common setup to load all sorting modules in current package
@@ -24,9 +26,12 @@ class SortAlgosTest(unittest.TestCase):
         """
         self.array = random.sample(range(50), 50)
         for algo, module in self.sorting_algos:
-            print ("Testing {}".format(algo))
-            result = getattr(module, algo)(array=self.array[:], repeat=1).output
+            print("Testing {}".format(algo))
+            result = getattr(module, algo)(
+                array=self.array[:], repeat=1).output
             for index, val in enumerate(range(50)):
                 assert val == result[index]
+
+
 if __name__ == '__main__':
     unittest.main()
